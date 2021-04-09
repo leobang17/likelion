@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where You At :: 어디서 봐?</title>
+    <link href = "../static/image/favicon_search.png" rel = "shortcut icon" type = "image/x-icon">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel = "stylesheet" href = "../static/CSS/stylesheet.css">
+
+    <style type="text/css">
+        a:link { color: black; text-decoration: none;}
+        a:visited { color: black; text-decoration: none;}
+        a:hover { color: gray; text-decoration: underline;}
+    </style>
+
+    <style>
+        #grid{
+          border:5px ;
+          display:grid;
+          grid-template-columns: 150px 1fr;
+        }
+        div{
+          border:5px ;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class = "container">
+        <header>
+            <!-- 로그인 및 로고-->
+            <form action = "보낼 곳" method = get>
+                <div class = "flex">
+                  <a href = "...">
+                      <img src = "../static/image/favicon_search.png" name = "아무로고" width="70" height="70" style = "float: left;  clear:both;">
+                  </a>
+                  <div style="text-align: right;">
+                    <a href = "...">회원가입</a>
+                    |
+                    <a href = "...">비밀번호 찾기</a>
+                    |
+                    <label for = "userid"></label>
+                    <input type ="text" id = "userid" name = "id" placeholder="아이디">
+                    <label for = "userpw"></label>
+                    <input type = "password" id = "userpw" name = "pw" placeholder="비밀번호">
+                    <input type="checkbox" name="autoLogin">
+                    자동 로그인
+                    <button type ="submit" class="btn btn-outline-primary">로그인</button>
+                  </div>
+                </div>
+            </form>
+
+            <!-- nav 바 -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">HOME</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          영화
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">한국 영화</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">해외 영화</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          드라마
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">한국 드라마</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">해외 드라마</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">다큐멘터리</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">커뮤니티</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="box1">
+                    <!-- 어떤 플랫폼에서 배급 중인지 작은 아이콘 먼저 표현 -->
+                    <span class="badge bg-danger">NETFLIX</span>
+                    <span class="badge" style="background-color: magenta;">WATCHA</span>
+                    <span class="badge bg-success">NAVER</span></div>
+                <div class="box2">
+                    <!-- 감독 / 출연진 -->
+                    <div>
+                        <img src = "../static/image/james.jpg" class = "img-thumbnail" alt="..." style = "height: 50%;">
+                        제임스 맨골
+                    </div>
+                    <div>
+                        <img src="../static/image/hugh.jpg" class="img-thumbnail" alt="...">
+                        휴 잭맨
+                    </div>
+                    <div>
+                        <img src="../static/image/dafne.jpg" class="img-thumbnail" alt="...">
+                        다프네 킨
+                    </div>                   
+                </div>
+
+                <div class="temp-box">
+                    <!-- 영화 포스터 -->
+                    <div class = "img">
+                         <img src = "../static/image/logan.jpg" 
+                            style = "width: 100%;
+                            height: 190px;
+                            object-fit: scale-down;">
+                    </div>  
+
+                </div>
+                <div class="temp-box">
+                    <!-- 영화 내용 -->
+                    <div name = "film_name" style="border: 5px solid gray;">
+                        <h4>로건</h4>
+                        <h6>Logan, 2017</h6>
+                    </div>
+                    <div style = "text-align: left;">
+                        <span class="badge bg-warning" style="color: black;">액션</span>
+                        <span class="badge bg-warning" style = "color: black;">SF</span>
+                            |   미국    |   137분   |   2017.03.01 개봉
+                    </div>
+                    <div>
+                        <p style = "text-align: left;">
+                        가까운 미래, 능력을 잃어가는 ‘로건(울버린)’은
+                        멕시코 국경 근처의 한 은신처에서 병든 ‘프로페서 X’를 돌보며 살아간다.
+                        세상으로부터 자신을 숨기며 살아가고자 했던 ‘로건’은 정체불명의 집단에게 쫓기는 돌연변이 소녀
+                        ‘로라’를 만나게 되고, 그녀를 지키기 위해 모든 것을 건 대결을 펼치게 되는데…
+                        </p>    
+                    </div>
+                </div>
+                <div class="boxtable">
+                    <!-- 배급 플랫폼 정보 -->
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">배급</th>
+                            <th scope="col">유무</th>
+                            <th scope="col">서비스방식</th>
+                            <th scope="col">가격</th>
+                            <th scope="col">바로가기</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">넷플릭스</th>
+                            <td>O</td>
+                            <td>구독</td>
+                            <td>월 14,500원</td>
+                            <td><a href = "https://netflix.com"><span class="badge" style="background-color: red;">NETFLIX</span></a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">왓챠</th>
+                            <td>O</td>
+                            <td>구독</td>
+                            <td>월 12,900원</td>
+                            <td><a href = "https://watcha.com/"><span class="badge" style="background-color: magenta;">WATCHA</span></a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">아마존프라임</th>
+                            <td>X</td>
+                            <td>구독</td>
+                            <td>월 $5.99</td>
+                            <td><a href = "https://www.primevideo.com/"><span class="badge" style= "background-color: skyblue;">prime video</span></a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">시리즈온</th>
+                            <td>O</td>
+                            <td>구매 / 대여</td>
+                            <td>구매: 6,000원 | 대여: 2,800원</td>
+                            <td><a href = "https://serieson.naver.com"><span class="badge bg-success">SERIES ON</span></a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">유튜브</th>
+                            <td>X</td>
+                            <td>구매 / 대여</td>
+                            <td>구매: 4,500원 | 대여: 1,400원</td>
+                            <td><a href = "https://youtube.com"><span class="badge bg-danger">YouTube</span></a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">애플TV</th>
+                            <td>X</td>
+                            <td>구독</td>
+                            <td>월 $4.99</td>
+                            <td><a href = "https://www.apple.com/apple-tv-plus/"><span class="badge" style="background-color: black;">Apple TV+</span></td>
+                          </tr>
+                          
+
+                        </tbody>
+                      </table>
+                </div>
+                <div class="box3">
+                    <!-- 한줄평 작성 -->
+                    <form action = "보낼 곳">
+                        <div class="mb-3" style="width: 80%;">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="한줄평을 작성하세요."></textarea>
+                        </div>
+                        <button type = "submit">작성</button> 
+                          
+                    </form>
+                </div>
+                <div class = "box5">
+                    <!-- rating 시스템 (인데 별점 어떻게 표현하는지 모르겠습니다 ㅜㅜ) -->
+                    <label for="customRange1" class="form-label">별점</label>
+                    <input type="range" class="form-range" id="customRange1">
+                   
+
+                </div>
+                <div class="box4">
+                    <!-- 다른 사람의 comment를 볼 수 있음 -->
+                    <div id = "comments">
+                      <h3>2 Comment(s)</h3>
+
+                      <div class="comment-row">
+                        <div class="comment-date">2021-03-17 14:05:23</div>
+                        <div class="comment-content">Sample comment 1</div>
+                      </div>
+                      <br><br>
+                      <div class="comment-row">
+                        <div class="comment-date">2021-04-01 19:12:59</div>
+                        <div class="comment-content">Sample comment 2</div>
+                      </div>
+                    </div>
+
+                    <br><br>
+
+
+
+
+                    <!-- 다른 comment 페이지 -->
+                    <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                    </ul>
+                    </nav>
+                </div>
+                <div class = "adbox">
+                    <!-- 광고란 -->
+                    <a href = "광고 페이지"><img src = "../static/image/41d2b24c0e39bb485ba463495d8639ef.png" width="80%"></a>
+                </div>
+              </div>
+        </main>
+    </div>
+    
+</body>
+
+
+</html>
